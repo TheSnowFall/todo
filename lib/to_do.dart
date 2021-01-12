@@ -9,3 +9,4 @@ class ToDo {
 
 // ignore: camel_case_types
 class feelFree{ }
+class ThisIs { }

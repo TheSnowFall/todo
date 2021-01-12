@@ -37,6 +37,8 @@ class SecondPage extends StatelessWidget {
   // Build a Form widget using the _formKey created above.
   return Form(
   key: _formKey,
+  child:Padding(
+    padding:const EdgeInsets.symmetric(horizontal: 16.0),
   child: Column(
   crossAxisAlignment: CrossAxisAlignment.start,
   children: <Widget>[
@@ -48,6 +50,16 @@ class SecondPage extends StatelessWidget {
   return null;
   },
   ),
+
+    TextFormField(
+      validator: (value) {
+        if (value.isEmpty) {
+          return 'Please enter some text';
+        }
+        return null;
+      },
+    ),
+
   Padding(
   padding: const EdgeInsets.symmetric(vertical: 16.0),
   child: ElevatedButton(
@@ -64,6 +76,7 @@ class SecondPage extends StatelessWidget {
   ),
   ),
   ],
+  ),
   ),
   );
   }
